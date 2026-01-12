@@ -154,7 +154,7 @@ export default function RegisterInterestForm({
                       required
                       className="w-28 bg-white text-black rounded-lg border border-gray-300 px-3 py-2.5 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
                     >
-                      <option value="">Code</option>
+                      <option value="">{formData.elements.codeplaceholder?.value}</option>
                       {CountriesCode.map((c, i) => (
                         <option key={i} value={c.value}>
                           {c.label}
@@ -166,7 +166,7 @@ export default function RegisterInterestForm({
                       id="field[12]"
                       name="field[12]"
                       required
-                      placeholder="Phone number"
+                      placeholder={formData.elements.phonenumberplaceholder?.value}
                       className="bg-white text-black mx-2 rounded-lg border border-gray-300 px-4 py-2.5 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
                     />
                   </div>
@@ -199,7 +199,7 @@ export default function RegisterInterestForm({
                     required
                     className={selectCls}
                   >
-                    <option value="">Select Country</option>
+                    <option value="">{formData.elements.countryplaceholder.value}</option>
                     {CountriesData.map((c, i) => (
                       <option key={i} value={c.value}>
                         {c.label}
