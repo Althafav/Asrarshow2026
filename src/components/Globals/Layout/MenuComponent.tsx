@@ -158,7 +158,7 @@ export default function MenuComponent() {
           </div>
 
           <div className="flex gap-2 lg:hidden">
-            {/* <LanguageToggle /> */}
+            <LanguageToggle />
             <button
               className="lg:hidden text-black"
               onClick={() => {
@@ -247,6 +247,7 @@ export default function MenuComponent() {
               })}
             </ul>
 
+            
             <div>
               {pageData.menuctabuttons.linkedItems.map((item: any) => {
                 return (
