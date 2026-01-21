@@ -1,5 +1,6 @@
 import Section from "@/components/UI/Section";
 import { deliveryClient } from "@/modules/Globals";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import {
@@ -145,22 +146,22 @@ export default function FooterComponent() {
             <div className="">
               {pageData.footermenuitems.linkedItems.map((item: any) => (
                 <div key={item.system.id}>
-                  <a
+                  <Link
                     href={item.elements.link.value}
                     className="text-black text-md font-semibold tracking-wide hover:opacity-85 transition"
                   >
                     {item.elements.name.value}
-                  </a>
+                  </Link>
 
                   <ul className="mt-4 space-y-2">
                     {item.elements.subitem.linkedItems.map((subItem: any) => (
                       <li key={subItem.system.id}>
-                        <a
+                        <Link
                           href={subItem.elements.link.value}
-                          className="text-black transition text-xs"
+                          className="text-black transition text-sm"
                         >
                           {subItem.elements.name.value}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
